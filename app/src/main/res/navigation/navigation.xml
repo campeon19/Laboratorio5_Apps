@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/titulo">
+
+    <fragment
+        android:id="@+id/titulo"
+        android:name="com.example.lab4.Titulo"
+        android:label="fragment_titulo"
+        tools:layout="@layout/fragment_titulo" >
+        <action
+            android:id="@+id/action_titulo_to_listaInvitados2"
+            app:destination="@id/listaInvitados" />
+    </fragment>
+    <fragment
+        android:id="@+id/listaInvitados"
+        android:name="com.example.lab4.ListaInvitados"
+        android:label="fragment_lista_invitados"
+        tools:layout="@layout/fragment_lista_invitados" >
+        <action
+            android:id="@+id/action_listaInvitados2_to_resultados"
+            app:destination="@id/resultados"
+            app:popUpTo="@id/listaInvitados"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/resultados"
+        android:name="com.example.lab4.Resultados"
+        android:label="fragment_resultados"
+        tools:layout="@layout/fragment_resultados" >
+        <action
+            android:id="@+id/action_resultados_to_listaInvitados"
+            app:destination="@id/listaInvitados"
+            app:popUpTo="@id/titulo" />
+    </fragment>
+    <fragment
+        android:id="@+id/about"
+        android:name="com.example.lab4.About"
+        android:label="fragment_about"
+        tools:layout="@layout/fragment_about" />
+</navigation>
