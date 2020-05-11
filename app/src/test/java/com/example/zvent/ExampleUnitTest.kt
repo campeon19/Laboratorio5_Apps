@@ -1,4 +1,4 @@
-package com.example.lab4
+package com.example.zvent
 
 import org.junit.Test
 
